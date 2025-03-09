@@ -1,0 +1,23 @@
+@model MovieStream.Models.MovieDto
+
+@{
+    ViewData["Title"] = "Add New Movie";
+}
+
+<h2>Add New Movie</h2>
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Genre">Genre</label>
+        <input type="text" class="form-control" id="Genre" name="Genre" required />
+    </div>
+    <div class="form-group">
+        <label for="ReleaseDate">Release Date</label>
+        <input type="date" class="form-control" id="ReleaseDate" name="ReleaseDate" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

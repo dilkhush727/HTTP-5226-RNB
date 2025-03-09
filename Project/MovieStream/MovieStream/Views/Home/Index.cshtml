@@ -1,8 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home - Movie Stream Locator";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center py-5">
+    <h1 class="display-4 text-primary">Welcome to Movie Stream Locator</h1>
+    <p class="lead text-muted">Discover the best movies to watch, manage your movie collection, and stay updated on the latest releases.</p>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <h3 class="h5 text-info">Explore Movie Streams</h3>
+            <p>With Movie Stream Locator, you can find streaming links for your favorite movies and explore movie details in an easy-to-use interface. Get started by browsing the latest movie releases.</p>
+            <a href="@Url.Action("Index", "Movie")" class="btn btn-primary btn-lg mt-3">View Movie Collection</a>
+        </div>
+        <div class="col-md-6">
+            <h3 class="h5 text-info">Manage Your Movie Collection</h3>
+            <p>Want to add, edit, or delete movies from your collection? The admin panel allows you to manage all your movie entries easily. Start organizing your collection today!</p>
+            <a href="@Url.Action("Create", "Movie")" class="btn btn-success btn-lg mt-3">Add New Movie</a>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,17 @@
+@model MovieStream.Models.MovieDto
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<h2>Movie Details</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text"><strong>Genre:</strong> @Model.Genre</p>
+        <p class="card-text"><strong>Release Date:</strong> @Model.ReleaseDate.ToShortDateString()</p>
+        <a href="@Url.Action("Edit", "Movie", new { id = Model.MovieId })" class="btn btn-warning">Edit</a>
+        <a href="@Url.Action("Index", "Movie")" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
